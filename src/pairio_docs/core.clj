@@ -36,11 +36,17 @@
     (nav-item "/collaboration.html" "Collaboration")
     (nav-item "/alpha.html" "Alpha Specific Stuff")]
    [:p
-    "Want to update this documentation? "
-    "Fork "
+    "Please help us keep this site up to date. "
+    "Repo's "
     (href "https://github.com/zkim/docs.pair.io"
-          "this")
-    " and send us a pull request."]])
+          "here")
+    "."]
+   [:p
+    "Thanks to "
+    (href "https://github.com" "GitHub")
+    " you can even edit these pages "
+    (href "https://github.com/zkim/docs.pair.io/blob/master/resources/pages/index.md"
+          "right in your browser.")]])
 
 (defn main [& opts]
   (let [{:keys [title content path]}
@@ -75,7 +81,10 @@
 (def site
   {:resources-path "./resources"
    :output-path "./html"
-   :pages [:index :instance-config :collaboration :alpha]})
+   :pages [:index
+           :instance-config
+           :collaboration
+           :alpha]})
 
 
 ;; ===========
@@ -94,9 +103,6 @@
 (defn cp-r [source dest]
   (sh/sh "cp" "-r" source dest))
 
- {:index (md-page :index)
-           :instance-config (md-page :instance-config)}
-
 (defn gen-site [{:keys [pages
                         resources-path
                         output-path]}]
@@ -110,5 +116,19 @@
                 (-> k name (str/replace #"\." "/") (str ".html")))]
       (spit path content))))
 
+(defn auto-regen [site & [timeout]]
+  (let [control (atom true)
+        stop (fn []
+               (reset! control false)
+               (println "Stopping regen."))
+        timeout (or timeout 500)]
+    (future
+      (println "Regenerating docs every" timeout "ms.")
+      (while @control
+        (try+ 
+          (use :reload 'pairio-docs.core)
+          (gen-site site)
+          (Thread/sleep timeout)
+          (catch Exception e (println (.getMessage e))))))
+    stop))
 
-(gen-site site)
