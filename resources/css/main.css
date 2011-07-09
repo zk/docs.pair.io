@@ -9,7 +9,7 @@ body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-h1 {
+.header h1 {
     font-weight: normal;
 }
 
@@ -19,7 +19,32 @@ h1 {
 .content_wrapper {
     background-color: white;
     border: solid #ddd 1px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
 
+
+/* Nav */
+
+.nav {
+    margin-top: 20px;
+}
+
+.nav ul li {
+    list-style-type: none;
+    margin-left: 0px;
+}
+
+.nav ul a {
+    font-size: 14pt;
+    text-decoration: none;
+    color: #4183C4;
+    border-left: solid transparent 2px;
+}
+
+.nav ul a:hover {
+    text-decoration: underline;
+}
+
+.nav p {
 }
