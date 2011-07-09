@@ -36,7 +36,7 @@
     (nav-item "/collaboration.html" "Collaboration")
     (nav-item "/alpha.html" "Alpha Specific Stuff")]
    [:p
-    "Please help us keep this site up to date. "
+    "Please help us improve this site. "
     "Repo's "
     (href "https://github.com/zkim/docs.pair.io"
           "here")
