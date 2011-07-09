@@ -1,0 +1,25 @@
+/* yo! */
+
+body {
+    font-family:Georgia, "Times New Roman", Times, serif;
+    background-color: #eee;
+}
+
+.header {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    font-weight: normal;
+}
+
+.content {
+}
+
+.content_wrapper {
+    background-color: white;
+    border: solid #ddd 1px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
