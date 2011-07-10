@@ -15,6 +15,8 @@ From slime:
 
     (stop)
 
+Open ./html/index.html
+
 Thanks for contributing.
 
 ## TODO
