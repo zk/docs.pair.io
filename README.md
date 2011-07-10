@@ -1,7 +1,5 @@
 # docs.pair.io
 
-Hey all, working on this now at http://50.17.68.171/ -- 6pm MST 7/9
-
 ## Usage
 
 From shell:
