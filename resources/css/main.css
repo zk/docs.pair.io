@@ -1,5 +1,9 @@
 /* yo! */
 
+a {
+    color: #19334D;
+}
+
 body {
     font-family:Georgia, "Times New Roman", Times, serif;
     background-color: #eee;
@@ -38,11 +42,20 @@ body {
     font-weight: normal;
 }
 
+.content_wrapper h1 {
+    border-bottom: solid #ddd 1px;
+}
+
 code {
     padding-left: 4px;
     padding-right: 4px;
     border: solid #dedede 1px;
     background-color: ghostWhite;
+}
+
+.aside {
+    font-size: 10pt;
+    font-style: italic;
 }
 
 /* Nav */
