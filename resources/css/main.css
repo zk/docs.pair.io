@@ -23,11 +23,33 @@ body {
     padding-bottom: 55px;
 }
 
+.content_wrapper {
+    font-size: 13pt;
+}
+
+.content_wrapper h1,
+.content_wrapper h2,
+.content_wrapper h3,
+.content_wrapper h4,
+.content_wrapper h5
+{
+    margin-top: 30px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+}
+
+code {
+    padding-left: 4px;
+    padding-right: 4px;
+    border: solid #dedede 1px;
+    background-color: ghostWhite;
+}
 
 /* Nav */
 
 .nav {
     margin-top: 20px;
+    font-size: 10pt;
 }
 
 .nav ul li {
@@ -48,3 +70,5 @@ body {
 
 .nav p {
 }
+
+

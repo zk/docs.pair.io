@@ -34,7 +34,8 @@
     (nav-item "/" "General")
     (nav-item "/instance-config.html" "Instance Config")
     (nav-item "/collaboration.html" "Collaboration")
-    (nav-item "/alpha.html" "Alpha Specific Stuff")]
+    (nav-item "/alpha.html" "Alpha Specific Stuff")
+    (nav-item "/faq.html" "FAQ")]
    [:p
     "Please help us improve this site. "
     "Repo's "
@@ -63,7 +64,7 @@
        [:div {:class "grid_14 prefix_1 suffix_1"}
         [:div {:class "grid_9 alpha"}
          content]
-        [:div {:class "grid_4 suffix_1 omega"}
+        [:div {:class "prefix_1 grid_4 omega"}
          (nav)]]
        [:div {:class "clear"}]]])))
 
@@ -84,7 +85,8 @@
    :pages [:index
            :instance-config
            :collaboration
-           :alpha]})
+           :alpha
+           :faq]})
 
 
 ;; ===========
@@ -126,9 +128,9 @@
       (println "Regenerating docs every" timeout "ms.")
       (while @control
         (try+ 
-          (use :reload 'pairio-docs.core)
-          (gen-site site)
-          (Thread/sleep timeout)
-          (catch Exception e (println (.getMessage e))))))
+         (use :reload 'pairio-docs.core)
+         (gen-site site)
+         (Thread/sleep timeout)
+         (catch Exception e (println (.getMessage e))))))
     stop))
 
