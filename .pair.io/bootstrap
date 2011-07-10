@@ -1,0 +1,10 @@
+#!/bin/sh
+
+ME=$(whoami)
+
+sudo apt-get install -y apache2
+
+mkdir /home/$ME/docs.pair.io/html
+
+sudo rm -rf /var/www
+sudo ln -s /home/$ME/docs.pair.io/html /var/www
