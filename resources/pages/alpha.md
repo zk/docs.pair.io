@@ -1,17 +1,10 @@
 # Alpha
 
-### Is this pair.io thing for me?
+## Collaboration
 
-Do you use vi, emacs, or other terminal-friendly editor?  Are you
-comfortable on the command line? Do you write software? Then yes, this
-thing is for you.
+**You're able to add collaborators that are not on the alpha list to your instances.**
+They'll still be given an account on your instance,
+and will be able to set their hooks, re-import keys, etc on the [user
+config page](https://pair.io/config).
 
-Long-term, we'll support GUI.
-
-### But wait, I don't pair. Why should I use this?
-
-Because, FFS, you're a professional (or you want to be). I'm not saying you have to use
-pair, but you should probably be looking into something that gives you
-disposable, repeatable dev environents. Check out
-[Vagrant](http://vagrantup.com) for a great local option.
-
+Pretty much the only thing you can't do (as an alpha) is spin up instances.
