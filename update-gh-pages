@@ -4,3 +4,6 @@ rm -rf /tmp/html
 cp -r ./html /tmp
 git checkout gh-pages
 mv /tmp/html/* ./
+git add .
+git commit -am 'Updated gh-pages'
+
