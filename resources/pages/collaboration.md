@@ -22,9 +22,10 @@ see one of the following user status messages:
 * **adding** - Adding account now.  
 * **live** - Good to go.
 * **need pub keys** - The user needs to authorize pair.io to read
-their pub keys from github.
+their pub keys from github. Send them an invite, which has 
+instructions on how to do this
 
-Additionally, you'll see the log spit out something like this:
+You'll see the log spit out something like this:
 
     Adding user zoidb...
     Adding zoidb's pks to authorized_keys...
