@@ -1,7 +1,7 @@
 # Changelog
 
 ## July 10, 2011
-* Added [docs site](http://docs.pair.io]
+* Added [docs site](http://docs.pair.io)
 
 ## July 5, 2011
 * Updated email smarts, better messaging around authorizing new accounts.
