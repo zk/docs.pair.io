@@ -10,7 +10,7 @@ repo. </p>
 <p>Repeatable, disposable dev instances.</p>
 
 <ul>
-<li>New project / dev? Get up and running in minutes.</li>
+<li>New dev? Get up and running in minutes.</li>
 <li>Mis-type <code>rm -rf ./</code> to your heart's content.</li>
 <li>No leaking project-specific state.</li>
 </ul>
@@ -24,8 +24,7 @@ repo. </p>
 <li>One (<em>1</em>) half-decent pipe.</li>
 </ul>
 
-<p>Plus, you get a nice UX around the whole thing. Polish up your
-dotfiles, it's going to be a good time.</p>
+<p>Plus, you get a nice UX around the whole thing. Grab your dotfiles, it's going to be a good time.</p>
 
 <h2>Getting Started</h2>
 
@@ -34,20 +33,27 @@ started.  We'll cover the easy way here (quickstarts). See the
 <a href="/instance-config.html">instance config page</a> for the other one.</p>
 
 <p>You'll need to have a Clojure, Rails 3, Ruby 1.9, or NodeJS 0.4.8
-project in mind.</p>
+project in mind. We'll use
+<a href="https://github.com/dakrone/cheshire">cheshire</a> as an example.</p>
 
 <ol>
 <li>Log in at <a href="https://pair.io">https://pair.io</a>.</li>
 <li>Click  <strong>New Session</strong>.</li>
-<li>Enter the repo identifier in <code>:login/:name</code> format and hit enter.  For example,
-<code>zkim/docs.pair.io</code> (this site).</li>
-<li>Check that the quickstart chosen for you makes sense.</li>
+<li>Enter <code>dakrone/cheshire</code> into the text box and hit enter.</li>
 <li><strong>Launch!</strong></li>
 <li>Wait. Quickstarts take 2-3 minutes to get to live. You'll see the IP of your instance on the right, above <strong>Logs</strong>.</li>
-<li>Make sure <strong>ssh-agent</strong> is running and shell into the instance: <code>ssh gh-login@XXX.XXX.XXX.XXX</code>.</li>
-<li>Pull down your dotfiles.</li>
-<li>Write some code.</li>
+<li>Make sure <strong>ssh-agent</strong> is running and shell into the instance: <code>ssh gh-login@ip</code>.</li>
+<li><code>cd ./cheshire &amp;&amp; lein test</code></li>
 </ol>
+
+<p>You should see:</p>
+
+<pre><code>...
+Testing cheshire.test.core
+Testing cheshire.test.custom
+Ran 29 tests containing 36 assertions.
+0 failures, 0 errors.
+</code></pre>
 
 <p>Woot!</p>
 
@@ -57,25 +63,7 @@ project in mind.</p>
 session. Subsequent runs connect to that socket session.</li>
 </ul>
 
-<h3>Looking to kick the tires?</h3>
-
-<h3>Clojure</h3>
-
-<ul>
-<li>Launch <code>dakrone/cheshire</code></li>
-<li><code>cd ./cheshire</code></li>
-<li><code>lein test</code></li>
-</ul>
-
-<p>You should see:</p>
-
-<pre><code>Testing cheshire.test.core
-Testing cheshire.test.custom
-Ran 29 tests containing 36 assertions.
-0 failures, 0 errors.
-</code></pre>
-
-<h3>Ruby</h3>
+<h3>Ok, lets try a ruby project.</h3>
 
 <ul>
 <li>Launch <code>thoughtbot/factory_girl</code></li>
@@ -85,7 +73,7 @@ Ran 29 tests containing 36 assertions.
 </ul>
 
 <p class="aside">
-   Ruby friends: is rvmsudo too clunky? 
+   Ruby friends: is root rvm too clunky? 
    &nbsp;
    &nbsp;
    Vote please -- 
@@ -96,10 +84,11 @@ Ran 29 tests containing 36 assertions.
 
 <p>You should see:</p>
 
-<pre><code>Finished in 1.1 seconds
+<pre><code>...
+Finished in 1.1 seconds
 202 examples, 0 failures
 ...
 Finished in 4.86 seconds
 102 examples, 0 failures
 </code></pre>
-</div><div class="prefix_1 grid_4 omega"><div class="nav"><ul><li><a href="/">General</a></li><li><a href="/instance-config.html">Instance Config</a></li><li><a href="/collaboration.html">Collaboration</a></li><li><a href="/alpha.html">Alpha Specific Stuff</a></li><li><a href="/faq.html">FAQ</a></li></ul><p>Please help us improve this site. Repo's <a href="https://github.com/zkim/docs.pair.io">here</a>.</p><p>Thanks to <a href="https://github.com">GitHub</a> you can even edit these pages <a href="https://github.com/zkim/docs.pair.io/blob/master/resources/pages/index.md">right in your browser.</a></p></div></div></div><div class="clear"></div></div></body></html>
+</div><div class="prefix_1 grid_4 omega"><div class="nav"><ul><li><a href="/">General</a></li><li><a href="/instance-config.html">Instance Config</a></li><li><a href="/collaboration.html">Collaboration</a></li><li><a href="/faq.html">FAQ</a></li></ul><p>Please help us improve this site. Repo's <a href="https://github.com/zkim/docs.pair.io">here</a>.</p><p>Thanks to <a href="https://github.com">GitHub</a> you can even edit these pages <a href="https://github.com/zkim/docs.pair.io/blob/master/resources/pages/index.md">right in your browser.</a></p></div></div></div><div class="clear"></div></div></body></html>
