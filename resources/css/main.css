@@ -51,12 +51,28 @@ body {
     border-bottom: solid #ddd 1px;
 }
 
+
+pre {
+    padding: 10px;
+    border: solid #dedede 1px;
+    background-color: ghostWhite;
+    margin-left: 20px;
+    font-size: 11pt;
+}
+
 code {
     padding-left: 4px;
     padding-right: 4px;
     border: solid #dedede 1px;
     background-color: ghostWhite;
 }
+
+pre code {
+    padding: 0;
+    border: 0;
+    background-color: inherit;
+}
+
 
 .aside {
     font-size: 10pt;
