@@ -34,7 +34,8 @@
     (nav-item "/" "General")
     (nav-item "/instance-config.html" "Instance Config")
     (nav-item "/collaboration.html" "Collaboration")
-    (nav-item "/faq.html" "FAQ")]
+    (nav-item "/faq.html" "FAQ")
+    (nav-item "/changelog.html" "Changelog")]
    [:p
     "Please help us improve this site. "
     "Repo's "
@@ -85,7 +86,8 @@
            :instance-config
            :collaboration
            :alpha
-           :faq]})
+           :faq
+           :changelog]})
 
 
 ;; ===========
