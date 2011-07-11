@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html><head><title>docs.pair.io</title><link href="/css/reset.css" rel="stylesheet" /><link href="/css/text.css" rel="stylesheet" /><link href="/css/960.css" rel="stylesheet" /><link href="/css/main.css" rel="stylesheet" /></head><body><div class="container_16"><div class="grid_16"><div class="header"><h1>docs.pair.io</h1></div></div></div><div class="clear"></div><div class="container_16 content_wrapper"><div class="grid_14 prefix_1 suffix_1"><div class="grid_9 alpha"><h1>Collaboration</h1>
+
+<p><strong>You are able to add collaborators that are not on the alpha list to your instances.</strong>
+They'll still be given an account on your instance,
+and will be able to set their hooks, re-import keys, etc on the <a href="https://pair.io/config">user
+config page</a>.</p>
+
+<p>Pretty much the only thing non-alpha-users can't do is spin up instances.</p>
+
+<p>Collaborators will need a <strong>github account and at least one keypair</strong>.
+An email address on thier public profile is required to send them
+invites at this point. No keys? No email? We recommend de-friending
+them, RL style.</p>
+
+<p>Adding users is pretty straightforward.  Type their github username
+into the textbox under <strong>Devs</strong>.  You'll see one of the following user
+status messages:</p>
+
+<ul>
+<li><strong>pending</strong> - Pair will add their account to your dev instance soon</li>
+<li><strong>adding</strong> - Adding account now. <br /></li>
+<li><strong>live</strong> - Good to go.</li>
+<li><strong>need pub keys</strong> - The user needs to authorize pair.io to read
+their pub keys from github.</li>
+</ul>
+
+<p>Additionally, you'll see the log spit out something like this:</p>
+
+<pre><code>Adding user zoidb...
+Adding zoidb's pks to authorized_keys...
+Running user hook.
+Done adding user.
+</code></pre>
+
+<p>They'll be able to log into the instance at this point. <code>ssh gh-login@XXX.XXX.XXX.XXX</code>.</p>
+</div><div class="prefix_1 grid_4 omega"><div class="nav"><ul><li><a href="/">General</a></li><li><a href="/instance-config.html">Instance Config</a></li><li><a href="/collaboration.html">Collaboration</a></li><li><a href="/alpha.html">Alpha Specific Stuff</a></li><li><a href="/faq.html">FAQ</a></li></ul><p>Please help us improve this site. Repo's <a href="https://github.com/zkim/docs.pair.io">here</a>.</p><p>Thanks to <a href="https://github.com">GitHub</a> you can even edit these pages <a href="https://github.com/zkim/docs.pair.io/blob/master/resources/pages/index.md">right in your browser.</a></p></div></div></div><div class="clear"></div></div></body></html>
