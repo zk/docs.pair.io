@@ -34,7 +34,6 @@
     (nav-item "/" "General")
     (nav-item "/instance-config.html" "Instance Config")
     (nav-item "/collaboration.html" "Collaboration")
-    (nav-item "/alpha.html" "Alpha Specific Stuff")
     (nav-item "/faq.html" "FAQ")]
    [:p
     "Please help us improve this site. "

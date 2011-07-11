@@ -12,9 +12,11 @@ An email address on thier public profile is required to send them
 invites at this point. No keys? No email? We recommend de-friending
 them, RL style.
 
-Adding users is pretty straightforward.  Type their github username
-into the textbox under **Devs**.  You'll see one of the following user
-status messages:
+
+### Adding Users
+
+Type their github username into the textbox under **Devs**.  You'll
+see one of the following user status messages:
 
 * **pending** - Pair will add their account to your dev instance soon
 * **adding** - Adding account now.  
@@ -29,6 +31,6 @@ Additionally, you'll see the log spit out something like this:
     Running user hook.
     Done adding user.
 
-They'll be able to log into the instance at this point. `ssh gh-login@XXX.XXX.XXX.XXX`.
+They'll be able to log in at this point. `ssh gh-login@ip`.
 
 
