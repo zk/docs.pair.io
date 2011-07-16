@@ -2,6 +2,7 @@
 
 rm -rf /tmp/html
 cp -r ./html /tmp/
+git clean -dfx
 git checkout gh-pages
 rm -rf ./css
 mv /tmp/html/* ./

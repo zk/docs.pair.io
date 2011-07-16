@@ -1,5 +1,8 @@
 # Changelog
 
+## July 16, 2011
+* Updated docs.
+
 ## July 15, 2011
 * Added one-click imaging of running instances.
 * Added repo config option `pairio-image`.
