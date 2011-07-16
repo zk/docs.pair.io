@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html><head><title>docs.pair.io</title><link href="/css/reset.css" rel="stylesheet" /><link href="/css/text.css" rel="stylesheet" /><link href="/css/960.css" rel="stylesheet" /><link href="/css/main.css" rel="stylesheet" /></head><body><div class="container_16"><div class="grid_16"><div class="header"><h1>docs.pair.io</h1></div></div></div><div class="clear"></div><div class="container_16 content_wrapper"><div class="grid_14 prefix_1 suffix_1"><div class="grid_10 alpha"><div class="content"><h1>Pair.io in 5 minutes.</h1>
+
+<p>In the next 5 minutes you'll:</p>
+
+<ul>
+<li>Spin up a dev instance.</li>
+<li>Run some tests.</li>
+<li>Learn how to have pair.io automatically install your dotfiles.</li>
+<li>Learn how to prep your instnace for collaboration.</li>
+</ul>
+
+<h2>Spin up a dev instance.</h2>
+
+<p>This will work with most Clojure, Rails 3, Ruby 1.9, or NodeJS 0.4.8
+project in mind. We'll use a Clojure project,
+<a href="https://github.com/dakrone/cheshire">cheshire</a>, as an
+example. </p>
+
+<p class="aside">
+For a good ruby example, try <code>thoughtbot/factory_girl</code>.
+</p>
+
+<ol>
+<li>Log in at <a href="https://pair.io">https://pair.io</a>.</li>
+<li>Click  <strong>New Session</strong>.</li>
+<li>Enter <code>dakrone/cheshire</code> into the text box and hit enter.</li>
+<li><strong>Launch!</strong></li>
+<li>Wait. Quickstarts take 2-3 minutes launch. You'll see the IP of your instance on the right, above <strong>Logs</strong>.</li>
+<li>Make sure <strong>ssh-agent</strong> is running and shell into the instance: <code>ssh gh-login@ip</code>.</li>
+</ol>
+
+<p>You're in!</p>
+
+<h2>Run some tests.</h2>
+
+<ul>
+<li><code>cd ./cheshire &amp;&amp; lein test</code></li>
+</ul>
+
+<p class="aside">
+factory_girl: <code>cd factory_girl && rvmsudo bundle install && spec test</code>
+</p>
+
+<p>You should see:</p>
+
+<pre><code>...
+Testing cheshire.test.core
+Testing cheshire.test.custom
+Ran 29 tests containing 36 assertions.
+0 failures, 0 errors.
+</code></pre>
+
+<p>Woot!</p>
+
+<ul>
+<li>There's a <code>tmux-shared</code> helper script in
+<code>/usr/bin</code>.  First run sets up a shared tmux socket
+session. Subsequent runs connect to that socket session.</li>
+</ul>
+
+<!--
+### Ok, lets try a ruby project.
+
+  * Launch `thoughtbot/factory_girl`
+  * `cd ./factory_girl`
+  * `rvmsudo bundle install`
+  * `rake spec`
+
+
+
+Qhe8SynJNuQqjW7OkW2G
+
+
+
+You should see:
+
+    ...
+    Finished in 1.1 seconds
+    202 examples, 0 failures
+    ...
+    Finished in 4.86 seconds
+    102 examples, 0 failures
+
+-->
+
+<p><a name="dotfiles" /></p>
+
+<h2>Dotfiles</h2>
+
+<p>You've got a dev instance with your repo on it, but if you're going to
+get any serious work done you'll need your dotfiles as well.</p>
+
+<p>Pair.io's <a href="https://pair.io/config">shell command hook</a> is run after
+your account is added to a dev instance, and can be used to
+automatically install your dotfiles. Lets simulate the shell hook on
+your running instance:</p>
+
+<ol>
+<li>Tab over to your instance.</li>
+<li>Enter <code class="small">curl
+https://raw.github.com/zkim/.pair.io/master/bootstrap | sh</code> into
+the command prompt and hit enter. <br /></li>
+<li>Your (my) dotfiles are now installed. <code>zsh</code> to see this in action.</li>
+</ol>
+
+<h2>Collaborate</h2>
+
+<p>Your cohort will need a github account, at least one public key on the
+account, and an email address on their public profile.</p>
+
+<ul>
+<li>Tab back to your session page.</li>
+<li>Type in cohort's github username into the text box under <strong>Devs</strong> and hit enter.</li>
+<li>You'll see one of two status messages: <strong>pending</strong> or <strong>need pub keys</strong>. 
+<span class="aside">
+<a href="/collaboration.html#adding-users">See &apos;Adding Users&apos;</a>.
+</span></li>
+<li>Click the <strong>send invite</strong> button to send your cohort an invite containing
+instructions on how to authorize and connect to your dev instance.</li>
+<li>Tab over to your shell. Run <code>tmux-shared</code>, which will set up a
+collaborative tmux session.</li>
+<li>Tell your cohort to run <code>tmux-shared</code> once they've logged into the
+box.</li>
+</ul>
+
+<h1>Have another 5 minutes?</h1>
+
+<ul>
+<li>Image your configured instance for future use.</li>
+</ul>
+
+<h2>Image Your Instance</h2>
+
+<p>Imaging is a way to achieve short launch times while retaining full
+control over the configuration of your instance.  </p>
+
+<ol>
+<li>Tab over to your shell.</li>
+<li><code>sudo apt-get install -y apache2</code></li>
+<li><code>sudo echo 'Woot!' &gt; /var/www/index.html</code></li>
+<li>Tab back to your session page and click <strong>Make Repo Image</strong>.</li>
+<li>Click <strong>Make Image</strong> then <strong>Confirm</strong>. Once imaging is done you'll
+see the pair.io image id pop up at the bottom of the page.</li>
+<li>Fork the <a href="https://github.com/zkim/pairio-imaging-example">pair.io imaging example repo</a>
+and edit <code>$REPO/.pair.io/config.yaml</code>.</li>
+<li>Paste in the pair.io image id.</li>
+<li>Save / commit &amp; push.</li>
+<li>Start a new pair.io session with your fork of the imaging example repo.</li>
+<li>Once the instance is bootstrapping, visit
+<code>http://&lt;instance ip&gt;</code>. <strong>Woot!</strong>.</li>
+</ol>
+</div></div><div class="grid_4 omega"><div class="nav"><ul><li><a href="/">General</a></li><li><a href="/pairio-in-5-minutes.html">Pair.io in 5 Minutes</a></li><li><a href="/instance-config.html">Instance Config</a></li><li><a href="/collaboration.html">Collaboration</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/changelog.html">Changelog</a></li></ul><hr><ul><li><a href="https://pair.io">Back to Pair.io</a></li></ul><hr><p>Please help us improve this site. Repo's <a href="https://github.com/zkim/docs.pair.io">here</a>.</p><p>Thanks to <a href="https://github.com">GitHub</a> you can even edit these pages <a href="https://github.com/zkim/docs.pair.io/blob/master/resources/pages/index.md">right in your browser.</a></p></div></div></div><div class="grid_16"><div class="footer">Please <a href="https://github.com/zkim/docs.pair.io/issues">open up an issue</a> on this site's <a href="https://github.com/zkim/docs.pair.io">github page</a> if any of the info here is confusing or could be improved.</div></div><div class="clear"></div></div></body></html>
