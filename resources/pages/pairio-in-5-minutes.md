@@ -94,3 +94,15 @@ the command prompt and hit enter.
 
 Your cohort will need a github account, at least one public key on the
 account, and an email address on their public profile.
+
+* Tab back to your session page.
+* Type in cohort's github username into the text box under **Devs** and hit enter.
+* You'll see one of two status messages: **pending** or **need pub keys**.
+* Click the **send invite** button to send them an invite containing
+  instructions on how to authorize and connect to your dev instance.
+* Tab over to your shell. Run `tmux-shared`, which will set up a
+  collaborative tmux session.
+* Tell your cohort to run `tmux-shared` once they've logged into the
+  box.
+
+

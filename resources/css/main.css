@@ -91,6 +91,7 @@ pre code {
 .nav {
     margin-top: 20px;
     font-size: 10pt;
+    margin-bottom: 55px;
 }
 
 .nav ul li {
@@ -118,4 +119,5 @@ pre code {
     background-color: #fafafa;
     border: solid #ddd 1px;
     padding: 10px;
+    color: #555;
 }

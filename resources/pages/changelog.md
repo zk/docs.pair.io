@@ -1,5 +1,9 @@
 # Changelog
 
+## July 15, 2011
+* Added one-click imaging of running instances.
+* Added repo config option `pairio-image`.
+
 ## July 13, 2011
 * Switched from json to yaml for the repo config file format.
 
