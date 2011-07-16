@@ -57,7 +57,6 @@ pre {
     padding: 10px;
     border: solid #dedede 1px;
     background-color: ghostWhite;
-    margin-left: 20px;
     font-size: 11pt;
 }
 
@@ -79,6 +78,12 @@ pre code {
     border: 0;
     background-color: inherit;
 }
+
+pre code.small {
+    white-space: pre;
+}
+
+
 
 
 .aside {

@@ -76,10 +76,10 @@
       [:div {:class "clear"}]
       [:div {:class "container_16 content_wrapper"}
        [:div {:class "grid_14 prefix_1 suffix_1"}
-        [:div {:class "grid_9 alpha"}
+        [:div {:class "grid_10 alpha"}
          [:div {:class "content"}
           content]]
-        [:div {:class "prefix_1 grid_4 omega"}
+        [:div {:class "grid_4 omega"}
          (nav)]]
        [:div {:class "grid_16"}
         (footer)]
