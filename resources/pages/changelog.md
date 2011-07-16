@@ -5,7 +5,7 @@
 * Added repo config option `pairio-image`.
 
 ## July 13, 2011
-* Switched from json to yaml for the repo config file format.
+* Switched from json to yaml for repo config file format.
 
 ## July 10, 2011
 * Added [docs site](http://docs.pair.io).

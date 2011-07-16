@@ -5,7 +5,7 @@
 Quickstarts are designed to get you up and working quickly on your
 repository.  They are images built with sensible default for their
 respective language stacks, and can be used to quickly launch a repo
-dosen't have a `.pair.io/config.yaml`.
+that dosen't have a `$REPO/.pair.io/config.yaml`.
 
 You can force a particular quickstart by adding the following to your
 `config.yaml`:
@@ -21,7 +21,7 @@ Pair.io looks for a config.yaml file in the `.pair.io` directory of
 your repository.  This config file allows you to specify what to
 launch and provision.
 
-There are four core configuration options that are required by pair.io
+There are four core key-value pairs that are required by pair.io
 to configure your instance:
 
 * `image-id` - The AMI id.
@@ -47,6 +47,37 @@ are sugar for specifying the above.
 * `pairio-image: 4e1fdeebe4b03f4db7d4c829-zkim-zkim/cljs` - Use
   pair.io image.
 
+## Repo Shell Hook
+
+You can specify a shell command to be run as part of the Hooks
+phase. This works similar to the way 
+[the user shell hook](/pairio-in-5-minutes.html#dotfiles) works.
+
+When `provision: sh` is specified, pair.io will look for and run
+your repo's `provisioning-hook` script.
+
+    # $REPO/.pair.io/config.yaml
+    provision: sh
+
+    # $REPO/.pair.io/provisioning-hook
+    #!/bin/sh
+    sudo apt-get install -y apache2 unzip
+    sudo echo 'hello world' > /var/www/index.html
+
+This script is run as the session's owner.  Please make sure you've
+made the script executable.
+
+
+## 3rd Pary Provisioning Tool Support
+
+<p class="aside">
+   3rd party config tool support is wonky right now. Working on a
+   fix. We'll support chef, pallet, and puppet during alpha.
+</p>
+
+Pair.io can automatically run your chef, pallet, or puppet scripts
+during the hooks phase.
+
 
 ## Pair.io Images
 
@@ -60,14 +91,25 @@ your session page.  Please note that **imaging will terminate your instance**.
 
 ## Example Config File
 
+Precedence: `quickstart` -> `pairio-image` -> rest.
+
 <pre><code class="small">
 # $REPO/.pair.io/config.yaml
 
 # Quickstarts
+# Quickstarts override all required keys (image-id, size,
+# inbound-ports, and provision)
 quickstart: empty # | ruby19 | rails3 | nodejs | clojure
 
+# Pair.io images, quickstart-like launch times with your own config.
+# Default values for pairio-image if unspecified in config.yaml:
+#   inbound-ports: 22, 80, 81, 443, 8080, 8081, 8443
+#   size:          small
+#   provision:     none
+pairio-image: 4e1fdeebe4b03f4db7d4c829-zkim-zkim/cljs
+
 # Pair.io gives you fine-grained control over what we provision for
-# you. Here's the full set of config options:
+# you. Here are the full set of config options:
 
 image-id: ami-1aad5273 # must be in the us-east-1 region
 size: large # micro | small | large
@@ -84,11 +126,10 @@ provision: sh # none | sh | chef
 chef:
   config: solo.rb # chef-solo -c flag
   json-attributes: node.json # -j flag
-# recipe-url: http://example.com/chef-solo.tar.gz # -r flag
+  recipe-url: http://example.com/chef-solo.tar.gz # -r flag
 
 
-# Pair.io images, quickstart-like launch times with your own config.
-pairio-image: 4e1fdeebe4b03f4db7d4c829-zkim-zkim/cljs
+
 </code></pre>
 
 

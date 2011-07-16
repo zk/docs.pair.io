@@ -5,6 +5,7 @@ In the next 5 minutes you'll:
 * Spin up a dev instance.
 * Run some tests.
 * Learn how to have pair.io automatically install your dotfiles.
+* Learn how to prep your instnace for collaboration.
 
 ## Spin up a dev instance.
 
@@ -79,7 +80,7 @@ You should see:
 
 -->
 
-
+<a name="dotfiles" />
 ## Dotfiles
 
 You've got a dev instance with your repo on it, but if you're going to
@@ -97,12 +98,6 @@ https://raw.github.com/zkim/.pair.io/master/bootstrap | sh</code> into
 the command prompt and hit enter.  
 3. Your (my) dotfiles are now installed. `zsh` to see this in action.
 
-
-
-# Have another 5 minutes?
-
-* Learn how to prep your instance for collaboration.
-* Image your configured instance for future use.
 
 ## Collaborate
 
@@ -123,3 +118,26 @@ account, and an email address on their public profile.
   box.
 
 
+# Have another 5 minutes?
+
+* Image your configured instance for future use.
+
+## Image Your Instance
+
+Imaging is a way to achieve short launch times while retaining full
+control over the configuration of your instance.  
+
+
+1. Tab over to your shell.
+2. `sudo apt-get install -y apache2`
+3. `sudo echo 'Woot!' > /var/www/index.html`
+4. Tab back to your session page and click **Make Repo Image**.
+5. Click **Make Image** then **Confirm**. Once imaging is done you'll
+   see the pair.io image id pop up at the bottom of the page.
+6. Fork the [pair.io imaging example repo](https://github.com/zkim/pairio-imaging-example)
+   and edit `$REPO/.pair.io/config.yaml`.
+7. Paste in the pair.io image id.
+8. Save / commit & push.
+9. Start a new pair.io session with your fork of the imaging example repo.
+10. Once the instance is bootstrapping, visit
+    `http://<instance ip>`. **Woot!**.
