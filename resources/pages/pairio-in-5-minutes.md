@@ -5,29 +5,36 @@ In the next 5 minutes you'll:
 * Spin up a dev instance.
 * Run some tests.
 * Learn how to have pair.io automatically install your dotfiles.
-* Learn how to prep your instance for collaboration.
 
 ## Spin up a dev instance.
 
-There's an easy way, and an easy-but-slightly-more-time-consuming way to get
-started.  We'll cover the easy way here (quickstarts). See the
-[instance config page](/instance-config.html) for the other one.
-
 This will work with most Clojure, Rails 3, Ruby 1.9, or NodeJS 0.4.8
 project in mind. We'll use a Clojure project,
-[cheshire](https://github.com/dakrone/cheshire), as an example.
-  
+[cheshire](https://github.com/dakrone/cheshire), as an
+example. 
+
+<p class="aside">
+For a good ruby example, try <code>thoughtbot/factory_girl</code>.
+</p>
+
+
 1. Log in at [https://pair.io](https://pair.io).
 2. Click  **New Session**.
 3. Enter `dakrone/cheshire` into the text box and hit enter.
 4. **Launch!**
-5. Wait. Quickstarts take 2-3 minutes to get to live. You'll see the IP of your instance on the right, above **Logs**.
+5. Wait. Quickstarts take 2-3 minutes launch. You'll see the IP of your instance on the right, above **Logs**.
 6. Make sure **ssh-agent** is running and shell into the instance: `ssh gh-login@ip`.
 
 You're in!
 
 ## Run some tests.
-1. `cd ./cheshire && lein test`
+* `cd ./cheshire && lein test` 
+
+<p class="aside">
+factory_girl: <code>cd factory_girl && rvmsudo bundle install && spec test</code>
+</p>
+  
+
 
 You should see:
     
@@ -73,7 +80,7 @@ You should see:
 -->
 
 
-## Install some dotfiles.
+## Dotfiles
 
 You've got a dev instance with your repo on it, but if you're going to
 get any serious work done you'll need your dotfiles as well.
@@ -90,15 +97,25 @@ https://raw.github.com/zkim/.pair.io/master/bootstrap | sh</code> into
 the command prompt and hit enter.  
 3. Your (my) dotfiles are now installed. `zsh` to see this in action.
 
-## Collaboration
+
+
+# Have another 5 minutes?
+
+* Learn how to prep your instance for collaboration.
+* Image your configured instance for future use.
+
+## Collaborate
 
 Your cohort will need a github account, at least one public key on the
 account, and an email address on their public profile.
 
 * Tab back to your session page.
 * Type in cohort's github username into the text box under **Devs** and hit enter.
-* You'll see one of two status messages: **pending** or **need pub keys**.
-* Click the **send invite** button to send them an invite containing
+* You'll see one of two status messages: **pending** or **need pub keys**. 
+  <span class="aside">
+   <a href="/collaboration.html#adding-users">See &apos;Adding Users&apos;</a>.
+  </span>
+* Click the **send invite** button to send your cohort an invite containing
   instructions on how to authorize and connect to your dev instance.
 * Tab over to your shell. Run `tmux-shared`, which will set up a
   collaborative tmux session.

@@ -32,11 +32,15 @@
   [:div {:class "nav"}
    [:ul
     (nav-item "/" "General")
-    (nav-item "/pairio-in-5-minutes.html" "Pair.io in 5 minutes.")
+    (nav-item "/pairio-in-5-minutes.html" "Pair.io in 5 Minutes")
     (nav-item "/instance-config.html" "Instance Config")
     (nav-item "/collaboration.html" "Collaboration")
     (nav-item "/faq.html" "FAQ")
     (nav-item "/changelog.html" "Changelog")]
+   [:hr]
+   [:ul
+    (nav-item "https://pair.io" "Back to Pair.io")]
+   [:hr]
    [:p
     "Please help us improve this site. "
     "Repo's "
