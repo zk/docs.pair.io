@@ -130,7 +130,7 @@ control over the configuration of your instance.
 
 1. Tab over to your shell.
 2. `sudo apt-get install -y apache2`
-3. `sudo echo 'Woot!' > /var/www/index.html`
+3. `sudo sh -c 'echo woot! > /var/www/index.html'`
 4. Tab back to your session page and click **Make Repo Image**.
 5. Click **Make Image** then **Confirm**. Once imaging is done you'll
    see the pair.io image id pop up at the bottom of the page.
