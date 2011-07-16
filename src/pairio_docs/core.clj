@@ -32,6 +32,7 @@
   [:div {:class "nav"}
    [:ul
     (nav-item "/" "General")
+    (nav-item "/pairio-in-5-minutes.html" "Pair.io in 5 minutes.")
     (nav-item "/instance-config.html" "Instance Config")
     (nav-item "/collaboration.html" "Collaboration")
     (nav-item "/faq.html" "FAQ")
@@ -49,6 +50,15 @@
     (href "https://github.com/zkim/docs.pair.io/blob/master/resources/pages/index.md"
           "right in your browser.")]])
 
+(defn footer []
+  (html
+   [:div {:class "footer"}
+    "Please "
+    [:a {:href "https://github.com/zkim/docs.pair.io/issues"} "open up an issue"]
+    " on this site's "
+    [:a {:href "https://github.com/zkim/docs.pair.io"} "github page"]
+    " if any of the info here is confusing or could be improved."]))
+
 (defn main [& opts]
   (let [{:keys [title content path]}
         (apply hash-map opts)]
@@ -63,9 +73,12 @@
       [:div {:class "container_16 content_wrapper"}
        [:div {:class "grid_14 prefix_1 suffix_1"}
         [:div {:class "grid_9 alpha"}
-         content]
+         [:div {:class "content"}
+          content]]
         [:div {:class "prefix_1 grid_4 omega"}
          (nav)]]
+       [:div {:class "grid_16"}
+        (footer)]
        [:div {:class "clear"}]]])))
 
 (def mdp (MarkdownProcessor.))
@@ -83,6 +96,7 @@
   {:resources-path "./resources"
    :output-path "./html"
    :pages [:index
+           :pairio-in-5-minutes
            :instance-config
            :collaboration
            :alpha
@@ -124,7 +138,7 @@
         stop (fn []
                (reset! control false)
                (println "Stopping regen."))
-        timeout (or timeout 500)]
+        timeout (or timeout 1000)]
     (future
       (println "Regenerating docs every" timeout "ms.")
       (while @control

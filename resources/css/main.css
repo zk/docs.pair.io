@@ -22,14 +22,15 @@ body {
 }
 
 .content {
+    margin-bottom: 55px;
 }
 
 .content_wrapper {
     background-color: white;
     border: solid #ddd 1px;
     padding-top: 55px;
-    padding-bottom: 55px;
     margin-bottom: 55px;
+    padding-bottom: 10px;
 }
 
 .content_wrapper {
@@ -65,6 +66,12 @@ code {
     padding-right: 4px;
     border: solid #dedede 1px;
     background-color: ghostWhite;
+}
+
+
+code.small {
+    font-size: 10pt;
+    white-space: nowrap;
 }
 
 pre code {
@@ -106,3 +113,9 @@ pre code {
 }
 
 
+.footer {
+    text-align: center;
+    background-color: #fafafa;
+    border: solid #ddd 1px;
+    padding: 10px;
+}
