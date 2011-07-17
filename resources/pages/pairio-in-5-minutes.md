@@ -38,7 +38,7 @@ factory_girl: <code>cd factory_girl && rvmsudo bundle install && spec test</code
   
 
 
-You should see (aside from Maven downloading dependencies):
+You should see:
     
     ...
     Testing cheshire.test.core
