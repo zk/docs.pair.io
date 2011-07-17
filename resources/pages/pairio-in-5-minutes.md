@@ -24,8 +24,8 @@ For a good ruby example, try <code>thoughtbot/factory_girl</code>.
 3. Enter `dakrone/cheshire` into the text box and hit enter.
 4. **Launch!**
 5. Wait. Quickstarts take 2-3 minutes launch. You'll see the IP of your instance on the right, above **Logs**.
-6. Make sure **ssh-agent** is running and shell into the instance:
-`ssh <your gh login>@<instance ip>`.
+6. [Make sure **ssh-agent** is running](http://www.dribin.org/dave/blog/archives/2007/11/28/ssh_agent_leopard/) and shell into the instance:
+`ssh <your github login>@<instance ip>`.
 
 You're in!
 
