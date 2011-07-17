@@ -24,7 +24,8 @@ For a good ruby example, try <code>thoughtbot/factory_girl</code>.
 3. Enter `dakrone/cheshire` into the text box and hit enter.
 4. **Launch!**
 5. Wait. Quickstarts take 2-3 minutes launch. You'll see the IP of your instance on the right, above **Logs**.
-6. Make sure **ssh-agent** is running and shell into the instance: `ssh gh-login@ip`.
+6. Make sure **ssh-agent** is running and shell into the instance:
+`ssh <your gh login>@<instance ip>`.
 
 You're in!
 
@@ -89,14 +90,14 @@ get any serious work done you'll need your dotfiles as well.
 
 Pair.io's [shell command hook](https://pair.io/config) is run after
 your account is added to a dev instance, and can be used to
-automatically install your dotfiles. Lets simulate the shell hook on
+automatically install your dotfiles. Let's simulate the shell hook on
 your running instance:
 
 1. Tab over to your instance.
 2. Enter <code class="small">curl
 https://raw.github.com/zkim/.pair.io/master/bootstrap | sh</code> into
 the command prompt and hit enter.  
-3. Your (my) dotfiles are now installed. `zsh` to see this in action.
+3. Your (my) dotfiles are now installed. Run a new `zsh` to see this in action.
 
 
 ## Collaborate
