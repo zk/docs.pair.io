@@ -38,7 +38,7 @@ factory_girl: <code>cd factory_girl && rvmsudo bundle install && spec test</code
   
 
 
-You should see:
+You should see (aside from Maven downloading dependencies):
     
     ...
     Testing cheshire.test.core
@@ -111,12 +111,17 @@ account, and an email address on their public profile.
   <span class="aside">
    <a href="/collaboration.html#adding-users">See &apos;Adding Users&apos;</a>.
   </span>
-* Click the **send invite** button to send your cohort an invite containing
-  instructions on how to authorize and connect to your dev instance.
-* Tab over to your shell. Run `tmux-shared`, which will set up a
+* Click the **send invite** button to send your cohort an invitation email
+  containing instructions on how to authorize and connect to your
+  dev instance.
+* In your shell. Run `tmux-shared`, which will set up a
   collaborative tmux session.
 * Tell your cohort to run `tmux-shared` once they've logged into the
   box.
+* You and your cohort should be able to see the same shell/editor/cli.
+* Hack on some code together, perhaps using something like
+  [Skype](http://skype.com) or [Google Talk](http://www.google.com/talk/)
+  to chat with each other.
 
 
 # Have another 5 minutes?
