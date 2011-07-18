@@ -1,4 +1,4 @@
-# Pair.io in 5 minutes: Clojure
+# Pair.io in 5 minutes: Ruby
 
 In the next 5 minutes you'll:
 
@@ -7,15 +7,13 @@ In the next 5 minutes you'll:
 * Learn how to have pair.io automatically install your dotfiles.
 * Learn how to prep your instance for collaboration.
 
-We'll use
-[cheshire](https://github.com/dakrone/cheshire) as an
-example. 
+We'll use thoughtbot's [factory_girl](https://github.com/thoughtbot/factory_girl) library as an example.
 
 ## Spin up a dev instance.
 
 1. Log in at [https://pair.io](https://pair.io).
 2. Click  **New Session**.
-3. Enter `dakrone/cheshire` into the text box and hit enter.
+3. Enter `thoughtbot/factory_girl` into the text box and hit enter.
 4. **Launch!**
 5. Wait. Quickstarts take 2-3 minutes launch. You'll see the IP of your instance on the right, above **Logs**.
 6. [Make sure **ssh-agent** is running](http://www.dribin.org/dave/blog/archives/2007/11/28/ssh_agent_leopard/) and shell into the instance:
@@ -24,15 +22,16 @@ example.
 You're in!
 
 ## Run some tests.
-* `cd ./cheshire && lein test` 
+* `cd ./factory_girl && rvmsudo bundle install && spec test`
 
 You should see:
-    
+
     ...
-    Testing cheshire.test.core
-    Testing cheshire.test.custom
-    Ran 29 tests containing 36 assertions.
-    0 failures, 0 errors.
+    Finished in 1.1 seconds
+    202 examples, 0 failures
+    ...
+    Finished in 4.86 seconds
+    102 examples, 0 failures
 
 Woot!
 
@@ -45,7 +44,6 @@ session. Subsequent runs connect to that socket session.
 
 You've got a dev instance with your repo on it, but if you're going to
 get any serious work done you'll need your dotfiles as well.
-
 
 Pair.io's [shell command hook](https://pair.io/config) is run after
 your account is added to a dev instance, and can be used to
