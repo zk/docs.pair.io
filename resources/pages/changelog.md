@@ -1,5 +1,12 @@
 # Changelog
 
+## July 20, 2011
+* Fixed bug where user accounts weren't being remove correctly on imaging.
+* Fixed "permission denied" error when using `tmux-shared`
+
+## July 18, 2011
+* Added `ssh gh-login@ip` text to session page.
+
 ## July 16, 2011
 * Updated docs.
 
