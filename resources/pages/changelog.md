@@ -1,5 +1,9 @@
 # Changelog
 
+## July 21, 2011
+* Added section on dashboard page to show sessions you've been invited to.
+* Fixed error preventing dev session page from rendering correctly.
+
 ## July 20, 2011
 * Fixed bug preventing user's shell preference from being set.
 * Automatically generate .gitconfig when not present.
