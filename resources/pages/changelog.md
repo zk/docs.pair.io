@@ -1,6 +1,8 @@
 # Changelog
 
 ## July 20, 2011
+* Fixed bug preventing user's shell preference from being set.
+* Automatically generate .gitconfig when not present.
 * Fixed bug where user accounts weren't being remove correctly on imaging.
 * Fixed "permission denied" error when using `tmux-shared`
 
