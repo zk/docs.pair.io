@@ -1,6 +1,8 @@
 # Changelog
 
 ## July 21, 2011
+* Added mechanism to send devs session info when they don't have a
+  public email address on their github profile.
 * Added section on dashboard page to show sessions you've been invited to.
 * Fixed error preventing dev session page from rendering correctly.
 
