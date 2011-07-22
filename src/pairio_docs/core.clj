@@ -4,7 +4,7 @@
         slingshot.core)
   (:require [clojure.string :as str]
             [clojure.contrib.io :as ju]
-            [clojure.java.shell :as sh])
+            [clojure.contrib.shell :as sh])
   (:import [com.petebevin.markdown MarkdownProcessor]))
 
 

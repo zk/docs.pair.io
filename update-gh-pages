@@ -1,5 +1,7 @@
 #!/bin/sh
 
+lein run -m gen
+
 rm -rf /tmp/html
 cp -r ./html /tmp/
 git clean -dfx
@@ -9,3 +11,5 @@ mv /tmp/html/* ./
 git add .
 git commit -am 'Updated gh-pages'
 git push origin
+
+git checkout master
