@@ -92,7 +92,7 @@ your session page.  Please note that **imaging will terminate your instance**.
 
 If found, pair.io will run the script found at `/etc/pair.io/hooks/instance-user` 
 as root with `$1` set to the user's login.  You can use this script to set up user
-specific state, such as initializing rvm builds, or seeding the user's 
+specific state, such as initializing rvm builds or seed the user's 
 `.m2/repository`.
 
 Unsuccessful execution of this script (exit code != 0) will result in printing the
