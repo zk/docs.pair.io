@@ -95,6 +95,15 @@ as root with `$1` set to the user's login.  You can use this script to set up us
 specific state, such as initializing rvm builds or seed the user's 
 `.m2/repository`.
 
+The following example seeds a user's m2 repo:
+
+    #!/bin/sh
+
+    LOGIN=$1
+
+    cp -R /etc/pair.io/.m2 /home/$LOGIN/
+    chown -R $LOGIN:$LOGIN /home/$LOGIN/.m2
+
 Unsuccessful execution of this script (exit code != 0) will result in printing the
 output of the failed run to the log on your session page, and can be used for 
 debugging (or, you could just run it yourself prior to imaging).
