@@ -88,6 +88,17 @@ retaining full control over the configuration of your instance.
 You'll find the imaging controls by clicking **Make Repo Image** on
 your session page.  Please note that **imaging will terminate your instance**.
 
+## Instance Hooks
+
+If found, pair.io will run the script found at `/etc/pair.io/hooks/instance-user` 
+as root with `$1` set to the user's login.  You can use this script to set up user
+specific state, such as initializing rvm builds, or seeding the user's 
+`.m2/repository`.
+
+Unsuccessful execution of this script (exit code != 0) will result in printing the
+output of the failed run to the log on your session page, and can be used for 
+debugging (or, you could just run it yourself prior to imaging).
+
 
 ## Example Config File
 
