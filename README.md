@@ -19,6 +19,13 @@ Open ./html/index.html
 
 Thanks for contributing.
 
+## Modifications to Markdown Syntax
+
+### Anchors
+
+`::foo-bar` -> `<a name="foo-bar">`
+Grabs non-space chars, escape like so: `\::`.
+
 ## TODO
 
 * `auto-regen` needs to track file modification times and regen only

@@ -1,5 +1,6 @@
 # Instance Config
 
+::quickstarts
 ## Quickstarts
 
 Quickstarts are designed to get you up and working quickly on your
@@ -15,6 +16,7 @@ You can force a particular quickstart by adding the following to your
 
 See the [quickstarts page](/quickstarts.html) for more information.
 
+::config-yaml
 ## config.yaml
 
 Pair.io looks for a config.yaml file in the `.pair.io` directory of
@@ -47,6 +49,7 @@ are sugar for specifying the above.
 * `pairio-image: 4e1fdeebe4b03f4db7d4c829-zkim-zkim/cljs` - Use
   pair.io image.
 
+::repo-shell-hook
 ## Repo Shell Hook
 
 You can specify a shell command to be run as part of the Hooks
@@ -67,7 +70,7 @@ your repo's `provisioning-hook` script.
 This script is run as the session's owner.  Please make sure you've
 made the script executable.
 
-
+::3rd-party-prov-tools
 ## 3rd Pary Provisioning Tool Support
 
 <p class="aside">
@@ -78,7 +81,7 @@ made the script executable.
 Pair.io can automatically run your chef, pallet, or puppet scripts
 during the hooks phase.
 
-
+::pairio-images
 ## Pair.io Images
 
 You have the option to create an image from a running dev instance at
@@ -88,6 +91,7 @@ retaining full control over the configuration of your instance.
 You'll find the imaging controls by clicking **Make Repo Image** on
 your session page.  Please note that **imaging will terminate your instance**.
 
+::instance-hooks
 ## Instance Hooks
 
 If found, pair.io will run the script found at `/etc/pair.io/hooks/instance-user` 
@@ -108,7 +112,7 @@ Unsuccessful execution of this script (exit code != 0) will result in printing t
 output of the failed run to the log on your session page, and can be used for 
 debugging (or, you could just run it yourself prior to imaging).
 
-
+::example-config-file
 ## Example Config File
 
 Precedence: `quickstart` -> `pairio-image` -> rest.

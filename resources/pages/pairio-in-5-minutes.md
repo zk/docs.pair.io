@@ -11,6 +11,7 @@ We'll use
 [cheshire](https://github.com/dakrone/cheshire) as an
 example. 
 
+::spin-up-instance
 ## Spin up a dev instance.
 
 1. Log in at [https://pair.io](https://pair.io).
@@ -23,6 +24,7 @@ example.
 
 You're in!
 
+::run-tests
 ## Run some tests.
 * `cd ./cheshire && lein test` 
 
@@ -40,7 +42,7 @@ Woot!
 `/usr/bin`.  First run sets up a shared tmux socket
 session. Subsequent runs connect to that socket session.
 
-<a name="dotfiles" />
+::dotfiles
 ## Dotfiles
 
 You've got a dev instance with your repo on it, but if you're going to
@@ -58,7 +60,7 @@ https://raw.github.com/zkim/.pair.io/master/bootstrap | sh</code> into
 the command prompt and hit enter.  
 3. Your (my) dotfiles are now installed. Run a new `zsh` to see this in action.
 
-
+::collaborate
 ## Collaborate
 
 Your cohort will need a github account, at least one public key on the
@@ -82,11 +84,12 @@ account, and an email address on their public profile.
   [Skype](http://skype.com) or [Google Talk](http://www.google.com/talk/)
   to chat with each other.
 
-
+::5-addtl-minutes
 # Have another 5 minutes?
 
 * Image your configured instance for future use.
 
+::image-your-instance
 ## Image Your Instance
 
 Imaging is a way to achieve short launch times while retaining full

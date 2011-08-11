@@ -1,3 +1,4 @@
+::collaboration
 # Collaboration
 
 **You are able to add collaborators that are not on the alpha list to your instances.**
@@ -13,7 +14,7 @@ invites at this point. No keys? No email? We recommend de-friending
 them, RL style.
 
 
-<a name="adding-users" />
+::adding-users
 ### Adding Users
 
 Type their github username into the textbox under **Devs**.  You'll

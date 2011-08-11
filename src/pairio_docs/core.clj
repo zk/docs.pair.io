@@ -88,8 +88,20 @@
 
 (def mdp (MarkdownProcessor.))
 
+(defn preprocess-markdown
+  "Handle customizations like ::foo -> <a name=\"foo\" />"
+  [text]
+  (str/replace
+   text
+   #"\\?::[^\s]*"
+   #(if (= \\ (first %1))
+      %1
+      (html [:a {:name (str/replace %1 "::" "")}]))))
+
 (defn markdown [text]
-  (.markdown mdp text))
+  (->> text
+       preprocess-markdown
+       (.markdown mdp)))
 
 (defn md-path [path]
   (-> path slurp markdown))

@@ -1,3 +1,4 @@
+::why-pairio
 # Why pair.io?
 
 Pair.io gives you a one-button,
@@ -22,6 +23,7 @@ Repeatable, disposable dev instances.
 Plus, you get a nice UX around the whole thing. Grab your dotfiles, it's going to be a good time.
 
 
+::workflow
 ## Workflow
 
 1. Spin up a dev instance.
