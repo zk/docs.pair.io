@@ -1,5 +1,30 @@
 # Changelog
 
+## August 30, 2011
+* Fixed broken link on user config page.
+* Added send email to owner when instance is up.
+* Added writing of session info (like public ip) to
+  `/etc/pair.io/current-session`.
+
+## August 29, 2011
+* New imaging system. Images are now second-class citizens in the
+  world of pair.io, and are heavily tied to repos.
+* Fixed launch erroring on private organization repos.
+
+## August 11, 2011
+* Fixed instance start erroring when user's default shell is zsh, but
+  no zsh present on instance.
+
+## August 3, 2011
+* Added [instance-user hook](http://docs.pair.io/instance-config.html#instance-hooks).
+
+## July 27, 2011
+* Made github api calls more robust.
+* Increased post instance request timeout.
+
+## July 25, 2011
+* Made adding owner to sudoers file more robust.
+
 ## July 21, 2011
 * Added mechanism to send devs session info when they don't have a
   public email address on their github profile.
