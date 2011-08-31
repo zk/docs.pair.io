@@ -1,5 +1,8 @@
 # Instance Config
 
+Instance config is the _what_ you're spinning up: server size and type
+(arch), firewall config, operating system, etc.
+
 ::quickstarts
 ## Quickstarts
 
@@ -11,13 +14,11 @@ that dosen't have a `$REPO/.pair.io/config.yaml`.
 You can force a particular quickstart by adding the following to your
 `config.yaml`:
 
-    # Force quickstart.
+    # Force ruby quickstart
     quickstart: ruby19 # | clojure | rails3 | nodejs
 
-See the [quickstarts page](/quickstarts.html) for more information.
-
 ::config-yaml
-## config.yaml
+## Config.yaml
 
 Pair.io looks for a config.yaml file in the `.pair.io` directory of
 your repository.  This config file allows you to specify what to
@@ -46,40 +47,6 @@ All other configuration options (such as `quickstart: ruby19` above)
 are sugar for specifying the above.
 
 * `quickstart: ruby19` - Use quickstart.
-* `pairio-image: 4e1fdeebe4b03f4db7d4c829-zkim-zkim/cljs` - Use
-  pair.io image.
-
-::repo-shell-hook
-## Repo Shell Hook
-
-You can specify a shell command to be run as part of the Hooks
-phase. This works similar to the way 
-[the user shell hook](/pairio-in-5-minutes.html#dotfiles) works.
-
-When `provision: sh` is specified, pair.io will look for and run
-your repo's `provisioning-hook` script.
-
-    # $REPO/.pair.io/config.yaml
-    provision: sh
-
-    # $REPO/.pair.io/provisioning-hook
-    #!/bin/sh
-    sudo apt-get install -y apache2 unzip
-    sudo echo 'hello world' > /var/www/index.html
-
-This script is run as the session's owner.  Please make sure you've
-made the script executable.
-
-::3rd-party-prov-tools
-## 3rd Pary Provisioning Tool Support
-
-<p class="aside">
-   3rd party config tool support is wonky right now. Working on a
-   fix. We'll support chef, pallet, and puppet during alpha.
-</p>
-
-Pair.io can automatically run your chef, pallet, or puppet scripts
-during the hooks phase.
 
 ::pairio-images
 ## Pair.io Images
@@ -88,11 +55,12 @@ You have the option to create an image from a running dev instance at
 any time.  This lets you achieve short launch times while still
 retaining full control over the configuration of your instance.
 
-You'll find the imaging controls by clicking **Make Repo Image** on
-your session page.  Please note that **imaging will terminate your instance**.
+See [imaging your instance](/imaging.html) for more information.
+
 
 ::instance-hooks
 ## Instance Hooks
+
 
 If found, pair.io will run the script found at `/etc/pair.io/hooks/instance-user` 
 as root with `$1` set to the user's login.  You can use this script to set up user
@@ -125,13 +93,6 @@ Precedence: `quickstart` -> `pairio-image` -> rest.
 # inbound-ports, and provision)
 quickstart: empty # | ruby19 | rails3 | nodejs | clojure
 
-# Pair.io images, quickstart-like launch times with your own config.
-# Default values for pairio-image if unspecified in config.yaml:
-#   inbound-ports: 22, 80, 81, 443, 8080, 8081, 8443
-#   size:          small
-#   provision:     none
-pairio-image: 4e1fdeebe4b03f4db7d4c829-zkim-zkim/cljs
-
 # Pair.io gives you fine-grained control over what we provision for
 # you. Here are the full set of config options:
 
@@ -144,15 +105,7 @@ inbound-ports:
   - 81
   - "tcp:1.2.3.4/32:443"
   - "udp:0.0.0.0/0:1234"
-provision: sh # none | sh | chef
-
-# when chef (http://wiki.opscode.com/display/chef/Chef+Solo)
-chef:
-  config: solo.rb # chef-solo -c flag
-  json-attributes: node.json # -j flag
-  recipe-url: http://example.com/chef-solo.tar.gz # -r flag
-
-
+provision: none
 
 </code></pre>
 

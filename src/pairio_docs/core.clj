@@ -35,6 +35,7 @@
     (nav-item "/pairio-in-5-minutes.html" "Pair.io in 5 min: Clojure")
     (nav-item "/pairio-in-5-minutes-ruby.html" "Pair.io in 5 min: Ruby")
     (nav-item "/instance-config.html" "Instance Config")
+    (nav-item "/imaging.html" "Imaging Your Instance")
     (nav-item "/collaboration.html" "Collaboration")
     (nav-item "/faq.html" "FAQ")
     (nav-item "/changelog.html" "Changelog")]
@@ -116,6 +117,7 @@
            :pairio-in-5-minutes
            :pairio-in-5-minutes-ruby
            :instance-config
+           :imaging
            :collaboration
            :alpha
            :faq
