@@ -14,4 +14,9 @@ thing is for you.
 2. Real-time, collaborative software development.
 3. Making 1 & 2 easy.
 
+::public-ip
+### How do I get the public IP of my instance from within the instance?
 
+Pair.io will write your instance's public IP (among other info) to
+`/etc/pair.io/current-session`.  You can `source` this file to use the
+environment varaibles in your own scripts.
