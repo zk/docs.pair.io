@@ -24,7 +24,7 @@ You're in!
 
 ::run-tests
 ## Run some tests.
-* `cd ./factory_girl && rvmsudo bundle install && spec test`
+* `cd ./factory_girl && bundle install && bundle exec rake spec`
 
 You should see:
 
@@ -98,13 +98,11 @@ control over the configuration of your instance.
 1. Tab over to your shell.
 2. `sudo apt-get install -y apache2`
 3. `sudo sh -c 'echo woot! > /var/www/index.html'`
-4. Tab back to your session page and click **Make Repo Image**.
-5. Click **Make Image** then **Confirm**. Once imaging is done you'll
-   see the pair.io image id pop up at the bottom of the page.
-6. Fork the [pair.io imaging example repo](https://github.com/zkim/pairio-imaging-example)
-   and edit `$REPO/.pair.io/config.yaml`.
-7. Paste in the pair.io image id.
-8. Save / commit & push.
-9. Start a new pair.io session with your fork of the imaging example repo.
-10. Once the instance is bootstrapping, visit
+4. Tab back to your session page and click **Gen Personal Image**.
+5. Enter a description, and click **Make Image!** then
+   **Confirm**. You'll get an email when your image is ready.
+6. Start a new pair.io session with with
+   `thoughtbot/factory_girl`. You'll see your new personal image is
+   selected by default. Launch!
+7. Once the instance is bootstrapping, visit
     `http://<instance ip>`. **Woot!**.

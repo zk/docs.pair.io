@@ -100,12 +100,10 @@ control over the configuration of your instance.
 2. `sudo apt-get install -y apache2`
 3. `sudo sh -c 'echo woot! > /var/www/index.html'`
 4. Tab back to your session page and click **Make Repo Image**.
-5. Click **Make Image** then **Confirm**. Once imaging is done you'll
-   see the pair.io image id pop up at the bottom of the page.
-6. Fork the [pair.io imaging example repo](https://github.com/zkim/pairio-imaging-example)
-   and edit `$REPO/.pair.io/config.yaml`.
-7. Paste in the pair.io image id.
-8. Save / commit & push.
-9. Start a new pair.io session with your fork of the imaging example repo.
-10. Once the instance is bootstrapping, visit
+5. Enter a description, and click **Make Image!** then
+   **Confirm**. You'll get an email when it's done.
+6. Start a new pair.io session with with
+   `dakrone/cheshire`. You'll see your new personal image is
+   selected by default. Launch!
+7. Once the instance is bootstrapping, visit
     `http://<instance ip>`. **Woot!**.
