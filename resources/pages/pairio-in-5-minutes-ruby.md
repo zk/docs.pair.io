@@ -16,9 +16,8 @@ We'll use thoughtbot's [factory_girl](https://github.com/thoughtbot/factory_girl
 2. Click  **New Session**.
 3. Enter `thoughtbot/factory_girl` into the text box and hit enter.
 4. **Launch!**
-5. Wait. Quickstarts take 2-3 minutes launch. You'll see the IP of your instance on the right, above **Logs**.
-6. [Make sure **ssh-agent** is running](http://www.dribin.org/dave/blog/archives/2007/11/28/ssh_agent_leopard/) and shell into the instance:
-`ssh <your github login>@<instance ip>`.
+5. Wait. Quickstarts take 4-6 minutes to launch. You'll see the IP of your instance on the right, above **Logs**.
+6. `ssh <your github login>@<instance ip>`.
 
 You're in!
 
