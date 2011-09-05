@@ -1,5 +1,18 @@
 # Changelog
 
+## September 5, 2011
+* Imaging buttons are now disabled until instance is live.
+* Improved error message when trying to add non-existent github user.
+
+## September 2, 2011
+* Updated ruby / rails quickstart. RVM root install switched out in
+  favor of RVM user install.
+
+## August 31, 2011
+* Run instance-boot hook (`/etc/pair.io/hooks/instance-boot') if
+  found.
+* Allow org members to create repo images of org repos.
+
 ## August 30, 2011
 * Fixed broken link on user config page.
 * Added send email to owner when instance is up.
