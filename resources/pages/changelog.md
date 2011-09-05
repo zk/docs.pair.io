@@ -1,6 +1,11 @@
 # Changelog
 
 ## September 5, 2011
+* Added fading visual indicator of new session log entries.
+* Fix duplicate log entries showing in session log.
+* Fix regression which showed disabled stop button on non-new
+  sessions.
+* Dynamically update public address and start time on dash page.
 * Imaging buttons are now disabled until instance is live.
 * Improved error message when trying to add non-existent github user.
 
