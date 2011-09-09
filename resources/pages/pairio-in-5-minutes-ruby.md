@@ -21,6 +21,21 @@ We'll use thoughtbot's [factory_girl](https://github.com/thoughtbot/factory_girl
 
 You're in!
 
+## RVM setup                                                                                                                                                                                               
+
+The Ruby quickstart should have set you up with a
+`$HOME/.bash_profile` and a `$HOME/.zshrc` if they don't already
+exist.  The purpose of this automatic setup is to get RVM working
+correctly.  You can verify that RVM's working correctly by running
+`rvm` in your shell.
+
+If `rvm` fails, put the following in your shell's dotfile:                                                                                                                                                 
+
+    [[ -s "$HOME/.rvm/scripts/rvm" ]] && source
+    "$HOME/.rvm/scripts/rvm"                                                                                                                                    
+
+Exit out of the instance, and log back in. RVM should be working                                                                                                                                           correctly now.           
+
 ::run-tests
 ## Run some tests.
 * `cd ./factory_girl && bundle install && bundle exec rake spec`
