@@ -30,9 +30,9 @@ correctly.  You can verify that RVM's working correctly by running
 `rvm` in your shell.
 
 If `rvm` fails, put the following in your shell's dotfile:                                                                                                                                                 
-
-    [[ -s "$HOME/.rvm/scripts/rvm" ]] && source
-    "$HOME/.rvm/scripts/rvm"                                                                                                                                    
+<pre><code class="small">
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"                                                                                                                                    
+</code></pre>
 
 Exit out of the instance, and log back in. RVM should be working                                                                                                                                           correctly now.           
 
