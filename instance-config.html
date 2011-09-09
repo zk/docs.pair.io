@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html><head><title>docs.pair.io</title><link href="/css/reset.css" rel="stylesheet" /><link href="/css/text.css" rel="stylesheet" /><link href="/css/960.css" rel="stylesheet" /><link href="/css/main.css" rel="stylesheet" /></head><body><div class="container_16"><div class="grid_16"><div class="header"><h1>docs.pair.io</h1></div></div></div><div class="clear"></div><div class="container_16 content_wrapper"><div class="grid_14 prefix_1 suffix_1"><div class="grid_10 alpha"><div class="content"><h1>Instance Config</h1>
 
+<p>Instance config is the <em>what</em> you're spinning up: server size and type
+(arch), firewall config, operating system, etc.</p>
+
 <p><a name="quickstarts"></a></p>
 
 <h2>Quickstarts</h2>
@@ -13,15 +16,13 @@ that dosen't have a <code>$REPO/.pair.io/config.yaml</code>.</p>
 <p>You can force a particular quickstart by adding the following to your
 <code>config.yaml</code>:</p>
 
-<pre><code># Force quickstart.
+<pre><code># Force ruby quickstart
 quickstart: ruby19 # | clojure | rails3 | nodejs
 </code></pre>
 
-<p>See the <a href="/quickstarts.html">quickstarts page</a> for more information.</p>
-
 <p><a name="config-yaml"></a></p>
 
-<h2>config.yaml</h2>
+<h2>Config.yaml</h2>
 
 <p>Pair.io looks for a config.yaml file in the <code>.pair.io</code> directory of
 your repository.  This config file allows you to specify what to
@@ -52,44 +53,7 @@ are sugar for specifying the above.</p>
 
 <ul>
 <li><code>quickstart: ruby19</code> - Use quickstart.</li>
-<li><code>pairio-image: 4e1fdeebe4b03f4db7d4c829-zkim-zkim/cljs</code> - Use
-pair.io image.</li>
 </ul>
-
-<p><a name="repo-shell-hook"></a></p>
-
-<h2>Repo Shell Hook</h2>
-
-<p>You can specify a shell command to be run as part of the Hooks
-phase. This works similar to the way 
-<a href="/pairio-in-5-minutes.html#dotfiles">the user shell hook</a> works.</p>
-
-<p>When <code>provision: sh</code> is specified, pair.io will look for and run
-your repo's <code>provisioning-hook</code> script.</p>
-
-<pre><code># $REPO/.pair.io/config.yaml
-provision: sh
-
-# $REPO/.pair.io/provisioning-hook
-#!/bin/sh
-sudo apt-get install -y apache2 unzip
-sudo echo 'hello world' &gt; /var/www/index.html
-</code></pre>
-
-<p>This script is run as the session's owner.  Please make sure you've
-made the script executable.</p>
-
-<p><a name="3rd-party-prov-tools"></a></p>
-
-<h2>3rd Pary Provisioning Tool Support</h2>
-
-<p class="aside">
-   3rd party config tool support is wonky right now. Working on a
-   fix. We'll support chef, pallet, and puppet during alpha.
-</p>
-
-<p>Pair.io can automatically run your chef, pallet, or puppet scripts
-during the hooks phase.</p>
 
 <p><a name="pairio-images"></a></p>
 
@@ -99,8 +63,7 @@ during the hooks phase.</p>
 any time.  This lets you achieve short launch times while still
 retaining full control over the configuration of your instance.</p>
 
-<p>You'll find the imaging controls by clicking <strong>Make Repo Image</strong> on
-your session page.  Please note that <strong>imaging will terminate your instance</strong>.</p>
+<p>See <a href="/imaging.html">imaging your instance</a> for more information.</p>
 
 <p><a name="instance-hooks"></a></p>
 
@@ -139,13 +102,6 @@ debugging (or, you could just run it yourself prior to imaging).</p>
 # inbound-ports, and provision)
 quickstart: empty # | ruby19 | rails3 | nodejs | clojure
 
-# Pair.io images, quickstart-like launch times with your own config.
-# Default values for pairio-image if unspecified in config.yaml:
-#   inbound-ports: 22, 80, 81, 443, 8080, 8081, 8443
-#   size:          small
-#   provision:     none
-pairio-image: 4e1fdeebe4b03f4db7d4c829-zkim-zkim/cljs
-
 # Pair.io gives you fine-grained control over what we provision for
 # you. Here are the full set of config options:
 
@@ -158,15 +114,7 @@ inbound-ports:
   - 81
   - "tcp:1.2.3.4/32:443"
   - "udp:0.0.0.0/0:1234"
-provision: sh # none | sh | chef
-
-# when chef (http://wiki.opscode.com/display/chef/Chef+Solo)
-chef:
-  config: solo.rb # chef-solo -c flag
-  json-attributes: node.json # -j flag
-  recipe-url: http://example.com/chef-solo.tar.gz # -r flag
-
-
+provision: none
 
 </code></pre>
-</div></div><div class="grid_4 omega"><div class="nav"><ul><li><a href="/">Why pair.io?</a></li><li><a href="/pairio-in-5-minutes.html">Pair.io in 5 min: Clojure</a></li><li><a href="/pairio-in-5-minutes-ruby.html">Pair.io in 5 min: Ruby</a></li><li><a href="/instance-config.html">Instance Config</a></li><li><a href="/collaboration.html">Collaboration</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/changelog.html">Changelog</a></li></ul><hr><ul><li><a href="https://pair.io">Back to pair.io</a></li></ul><hr><p>Please help us improve this site. Repo's <a href="https://github.com/zkim/docs.pair.io">here</a>.</p><p>Thanks to <a href="https://github.com">GitHub</a> you can even edit these pages <a href="https://github.com/zkim/docs.pair.io/blob/master/resources/pages/index.md">right in your browser.</a></p></div></div></div><div class="grid_16"><div class="footer">Please <a href="https://github.com/zkim/docs.pair.io/issues">open up an issue</a> on this site's <a href="https://github.com/zkim/docs.pair.io">github page</a> if any of the info here is confusing or could be improved.</div></div><div class="clear"></div></div></body></html>
+</div></div><div class="grid_4 omega"><div class="nav"><ul><li><a href="/">Why pair.io?</a></li><li><a href="/pairio-in-5-minutes.html">Pair.io in 5 min: Clojure</a></li><li><a href="/pairio-in-5-minutes-ruby.html">Pair.io in 5 min: Ruby</a></li><li><a href="/instance-config.html">Instance Config</a></li><li><a href="/imaging.html">Imaging Your Instance</a></li><li><a href="/collaboration.html">Collaboration</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/changelog.html">Changelog</a></li></ul><hr><ul><li><a href="https://pair.io">Back to pair.io</a></li></ul><hr><p>Please help us improve this site. Repo's <a href="https://github.com/zkim/docs.pair.io">here</a>.</p><p>Thanks to <a href="https://github.com">GitHub</a> you can even edit these pages <a href="https://github.com/zkim/docs.pair.io/blob/master/resources/pages/index.md">right in your browser.</a></p></div></div></div><div class="grid_16"><div class="footer">Please <a href="https://github.com/zkim/docs.pair.io/issues">open up an issue</a> on this site's <a href="https://github.com/zkim/docs.pair.io">github page</a> if any of the info here is confusing or could be improved.</div></div><div class="clear"></div></div></body></html>
