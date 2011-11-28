@@ -1,5 +1,11 @@
 # Changelog
 
+## November 28, 2011
+* Removed RVM from Ruby / Rails quickstarts.
+
+## September 30, 2011
+* Added usage page.
+
 ## September 5, 2011
 * Added fading visual indicator of new session log entries.
 * Fix duplicate log entries showing in session log.
